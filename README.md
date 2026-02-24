@@ -1,62 +1,94 @@
 # AI Image & Video Generation Platform
 
-## Pages & Features
+Create images and videos using AI generation models.
 
-### 1. Dashboard
-- Recent creations gallery
-- Usage stats (images generated, credits remaining)
-- Trending templates & styles
-- Quick-start generation buttons
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Image Generator
-- Text-to-image prompt input with style presets
-- Style selector (photorealistic, illustration, 3D, watercolor)
-- Aspect ratio & resolution options
-- Batch generation (multiple variations)
-- Negative prompt & advanced parameters
+## Tech Stack
 
-### 3. Video Generator
-- Text-to-video & image-to-video creation
-- Scene builder with transition effects
-- Duration, frame rate & resolution controls
-- Background music & voiceover options
-- Subtitle & text overlay editor
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Product Photography
-- Upload product → generate studio-quality photos
-- Background removal & replacement
-- Lifestyle scene placement
-- Multiple angle generation
-- Batch processing for catalogs
+## Getting Started
 
-### 5. Brand Kit
-- Upload brand assets (logo, colors, fonts)
-- Consistent brand application across generated content
-- Style guide enforcement
-- Saved brand presets
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Template Library
-- Pre-built templates (social posts, ads, banners, thumbnails)
-- Customize templates with AI assistance
-- Save custom templates
-- Category & industry filters
+## License
 
-### 7. Edit & Refine
-- AI inpainting (modify specific areas)
-- Upscale & enhance resolution
-- Color correction & filter application
-- Remove / add objects from images
-- Extend canvas / outpaint
+MIT © Mehdi Nabhani
 
-### 8. Asset Manager
-- All generated assets organized by project
-- Tag, favorite & folder organization
-- Version history per asset
-- Download in multiple formats (PNG, JPG, SVG, MP4, GIF)
-- Share link generation
+---
 
-### 9. Settings
-- Default generation preferences
-- API key management
-- Usage limits & billing
-- Team sharing & permissions
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
